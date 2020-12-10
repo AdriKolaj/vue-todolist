@@ -5,9 +5,11 @@
 
 var app = new Vue({
 
+
   el: '#root',
 
   data: {
+
     toDoList: [
       "Fare la spesa",
       "Studiare",
@@ -17,19 +19,23 @@ var app = new Vue({
     newToDo: "",
     alertMessage: "",
     isHovering: false
+
   },
 
   methods: {
+
     addNew: function() {
       if (this.newToDo != "") {
-      this.toDoList.push(this.newToDo),
-      this.newToDo = "",
-      this.alertMessage = ""
-    } else this.alertMessage = "Inserisci un'attività valida!"
+        this.toDoList.push(this.newToDo),
+        this.newToDo = "",
+        this.alertMessage = ""
+      } else this.alertMessage = "Inserisci un'attività valida!"
     },
-    deleteX: function(index) {
+    removeElement: function(index) {
       this.toDoList.splice(index, 1)
     },
+
   }
+
 
 });
